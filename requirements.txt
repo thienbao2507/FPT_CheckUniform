@@ -1,7 +1,7 @@
 flask
 opencv-python-headless
 numpy
-tensorflow==2.12.0
+tensorflow
 torch
 torchvision
 mediapipe

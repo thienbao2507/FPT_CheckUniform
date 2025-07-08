@@ -7,3 +7,4 @@ torchvision
 mediapipe
 ultralytics
 Pillow
+opencv-python

@@ -31,4 +31,6 @@ def result_image():
     return send_file("check/test_result.jpg", mimetype='image/jpeg')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 10000))  # Render sẽ gán biến PORT
+    app.run(host='0.0.0.0', port=port, debug=False)
+

@@ -1,7 +1,7 @@
 FROM python:3.10-slim
 
-# Cài libGL cho OpenCV
-RUN apt-get update && apt-get install -y libgl1
+# Cài libGL và libglib2.0 cho OpenCV
+RUN apt-get update && apt-get install -y libgl1 libglib2.0-0 && rm -rf /var/lib/apt/lists/*
 
 # Cài các thư viện Python
 COPY requirements.txt .

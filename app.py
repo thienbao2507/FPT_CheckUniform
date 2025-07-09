@@ -28,7 +28,10 @@ def upload():
 
 @app.route('/result')
 def result_image():
-    return send_file("check/test_result.jpg", mimetype='image/jpeg')
+    result_path = "check/test_result.jpg"
+    if not os.path.exists(result_path):
+        return "❌ Ảnh kết quả chưa được tạo!", 404
+    return send_file(result_path, mimetype='image/jpeg')
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 10000))  # Render sẽ gán biến PORT
